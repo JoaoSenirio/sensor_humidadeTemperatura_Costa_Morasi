@@ -27,6 +27,7 @@
 ```bash
 # MicroPython (Thonny): copiar src/main.py para a placa e rodar
 # C (Pico SDK): ver docs/compilacao.md
+```
 
 ## 5. Exemplos de uso
 - `src/exemplo_basico.py` — leitura bruta  
