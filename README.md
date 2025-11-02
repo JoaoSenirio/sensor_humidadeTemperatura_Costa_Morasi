@@ -49,7 +49,7 @@
 > - [ ] Testes em `test/` com instruções  
 > - [ ] `relatorio.md` com lições aprendidas
 
-## 7. Estrutura do Repositório
+## 📁 7. Estrutura do Repositório
 
 O projeto segue o padrão definido pela disciplina EA801 — Sistemas Embarcados, 
 visando padronizar as entregas e facilitar o reuso dos códigos e documentação.
