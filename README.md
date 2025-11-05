@@ -1,8 +1,8 @@
 # <NOME DO SENSOR> — Sensores na BitDogLab
 
-**Dupla:** Nome A (RA / @usuario), Nome B (RA / @usuario)  
+**Dupla:** João Senírio 245760/JoaoSenirio Antônio Victor Morasi 167218/VictMorasi  
 **Turma:** EA801 — 2025S2  
-**Repositório:** (URL deste repo)
+**Repositório:** https://github.com/JoaoSenirio/sensor_humidadeTemperatura_Costa_Morasi
 
 ## 1. Descrição do sensor
 - Fabricante / modelo:
