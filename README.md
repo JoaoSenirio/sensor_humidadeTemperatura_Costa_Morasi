@@ -20,7 +20,9 @@
 
 ## 3. Dependências
 - MicroPython v1.26.0
-- Bibliotecas utilizadas: micropython_ahtx0, micropython-ssd1306
+- Bibliotecas utilizadas: 
+    micropython_ahtx0
+    micropython-ssd1306
 - Como instalar (passo a passo):
 
 ## 4. Como executar
