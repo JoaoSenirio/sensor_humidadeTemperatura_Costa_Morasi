@@ -5,11 +5,11 @@
 **Repositório:** https://github.com/JoaoSenirio/sensor_humidadeTemperatura_Costa_Morasi
 
 ## 1. Descrição do sensor
-- Fabricante / modelo:
+- Fabricante / modelo: /AHT10
 - Princípio de funcionamento:
 - Tensão/consumo típicos:
 - Faixa de medição / resolução:
-- Datasheet (URL):
+- Datasheet (URL): https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=657
 
 ## 2. Conexões de hardware
 - Tabela indicando as conexões entre BitDogLab e sensor:
@@ -19,8 +19,8 @@
 ![conexoes](docs/conexoes.jpg)
 
 ## 3. Dependências
-- MicroPython/C versão:
-- Bibliotecas utilizadas:
+- MicroPython v1.26.0
+- Bibliotecas utilizadas: micropython_ahtx0, micropython-ssd1306
 - Como instalar (passo a passo):
 
 ## 4. Como executar
