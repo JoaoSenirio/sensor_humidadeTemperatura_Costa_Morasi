@@ -7,7 +7,7 @@
 ## 1. Descrição do sensor
 - Fabricante / modelo:  /AHT10
 - Princípio de funcionamento:
-- Tensão/consumo típicos:
+- Tensão/consumo típicos: 1.8V a 6V
 - Faixa de medição / resolução:
 - Datasheet (URL): https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=657
 
