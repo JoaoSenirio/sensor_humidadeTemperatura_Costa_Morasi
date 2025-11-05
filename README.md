@@ -1,11 +1,11 @@
 # <NOME DO SENSOR> — Sensores na BitDogLab
 
-**Dupla:** João Senírio 245760/JoaoSenirio Antônio Victor Morasi 167218/VictMorasi  
+**Dupla:** João Senírio 245760/JoaoSenirio, Antonio Victor Morasi 167218/VictMorasi  
 **Turma:** EA801 — 2025S2  
 **Repositório:** https://github.com/JoaoSenirio/sensor_humidadeTemperatura_Costa_Morasi
 
 ## 1. Descrição do sensor
-- Fabricante / modelo: /AHT10
+- Fabricante / modelo:  /AHT10
 - Princípio de funcionamento:
 - Tensão/consumo típicos:
 - Faixa de medição / resolução:
@@ -20,8 +20,14 @@
 
 ## 3. Dependências
 - MicroPython v1.26.0
-- Bibliotecas utilizadas: micropython_ahtx0, micropython-ssd1306
+- Bibliotecas utilizadas: 
+    1. micropython_ahtx0
+    2. micropython-ssd1306
 - Como instalar (passo a passo):
+    1. Clonar os repositórios "https://github.com/targetblank/micropython_ahtx0" e "https://github.com/stlehmann/micropython-ssd1306"
+
+    2. Adicionar os arquivos "ahtx0.py" e "ssd1306.py" a Pico
+
 
 ## 4. Como executar
 ```bash
