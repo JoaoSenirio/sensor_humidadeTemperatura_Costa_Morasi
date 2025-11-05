@@ -24,7 +24,7 @@ env/
 .idea/
 *.log
 *.tmp
-
+*.micropico
 # === C / CMAKE ===
 # Diretórios de build e artefatos de compilação
 build/
