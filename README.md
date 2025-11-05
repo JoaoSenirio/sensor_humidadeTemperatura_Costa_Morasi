@@ -9,6 +9,8 @@
 - Princípio de funcionamento:
 - Tensão/consumo típicos: 1.8V a 6V
 - Faixa de medição / resolução:
+    1. Temperatura: 10°C a 50°C / 0,01°C
+    2. Umidade: 0 - 80% RH / 0,024% RH
 - Datasheet (URL): https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=657
 
 ## 2. Conexões de hardware
