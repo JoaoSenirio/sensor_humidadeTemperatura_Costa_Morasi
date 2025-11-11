@@ -15,7 +15,7 @@
 - Tabela indicando as conexões entre BitDogLab e sensor:
 - Observações (resistores, alimentação externa, níveis lógicos):
 
-**Tabela de conexões (imagem em `docs/`):**  
+**Imagem das conexões de hardware (imagem em `docs/`):**  
 ![conexoes](docs/montagem_hardware.jpg)
 
 ## 3. Dependências
@@ -40,6 +40,7 @@ git submodule update --init --recursive
 ## 6. Resultados e validação
 Abaixo, encontra-se o resultado do código implementado para descobrir os endereços dos dispositivos conectados no barramento i2c. Vemos que tem um dispositivo no endereço 0x38, correspondendo exatamente ao sensor em uso AHT10.
 
+### Resultado da varredura de endereços I2C
 ![endereços I²C](docs/enderecos_i2c.jpg)
 
 Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram salvos em test/logs. A seguir encontra-se as tabelas com os dados gerados, e fica nítido que as leituras de temperatura e umidade previamente tratadas com filtro de média móvel ficam bem mais estáveis.
