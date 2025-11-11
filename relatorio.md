@@ -63,13 +63,11 @@ O comportamento observado demonstra que o sistema de aquisição e exibição es
 ---
 
 ## 4. Dificuldades e Soluções
-Relate os principais desafios técnicos enfrentados e as soluções implementadas.  
-Explique como eventuais limitações foram contornadas ou mitigadas, de modo a registrar aprendizados úteis para reproduções futuras.
 
-**Exemplos:**
-- Ajuste de timing no barramento I²C;  
-- Necessidade de adaptação da biblioteca para MicroPython;  
-- Filtragem de ruído em leitura analógica.
+Dificuldade: As bibliotecas necessárias para operar o sensor e o display (ahtx0.py e ssd1306.py) não estavam presentes no firmware padrão do MicroPython, resultando em erro de importação.
+
+Solução: Ambas as bibliotecas foram adicionadas manualmente ao diretório do projeto. Essa abordagem garantiu compatibilidade total com o ambiente MicroPython da BitDogLab, permitindo o correto funcionamento tanto do sensor AHT20 quanto do display OLED.
+
 
 ---
 
