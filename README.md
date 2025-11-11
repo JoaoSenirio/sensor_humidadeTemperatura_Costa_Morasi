@@ -12,14 +12,20 @@
 - Datasheet (URL): https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
 
 ## 2. Conexões de hardware
-- Tabela indicando as conexões entre BitDogLab e sensor:
-- Observações (resistores, alimentação externa, níveis lógicos):
+| Pino do AHT10 | Conexão na BitDogLab |
+|---------------|----------------------|
+| GND | GND |
+| VCC | 3.3 V (VCC) |
+| SDA | GPIO2 (SDA) |
+| SCL | GPIO3 (SCL) |
+
+Dado as conexões acima e o conector JST J5 da BitDogLab, o qual contém exatamente esses pinos, bastou conectarmos o sensor e a BitDogLab por meio do cabo que veio com o sensor, ficando como ilustrado na imagem abaixo.
 
 **Imagem das conexões de hardware (imagem em `docs/`):**  
 ![conexoes](docs/montagem_hardware.jpg)
 
 ## 3. Dependências
-- MicroPython/C versão:
+- MicroPython/C versão: MicroPython v1.26.0
 - Bibliotecas utilizadas: SSD1306 e ahtx0
 - Como instalar (passo a passo):
 Para instalar as bibliotecas indicadas, basta executar o comando abaixo na raiz do repositório git local. Isso deve gerar as bibliotecas no caminho src/lib. Uma vez feito isso, é preciso realizar o upload dos arquivos ssd1306.py e ahtx0.py no RP2040.
@@ -34,6 +40,7 @@ git submodule update --init --recursive
 ```
 
 ## 5. Exemplos de uso
+- `src/endereco_sensor.py` — descobrir de dispositivos no barramento I2C
 - `src/exemplo_basico.py` — leitura bruta  
 - `src/exemplo_filtrado.py` — leitura com média móvel
 
