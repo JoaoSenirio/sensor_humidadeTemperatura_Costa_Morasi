@@ -1,35 +1,61 @@
 # Relatório Técnico da Dupla
 
 ## 1. Escopo e Objetivos
-Descreva de forma clara o propósito do experimento ou desenvolvimento realizado, delimitando o escopo do trabalho e os objetivos técnicos a serem atingidos.  
-Inclua também os critérios de sucesso utilizados para validar o funcionamento do sistema.  
 
-**Exemplo:**  
-> Implementar a leitura do sensor AHT20 via interface I²C e exibir em tempo real a temperatura e a umidade relativa no display OLED da BitDogLab, garantindo estabilidade de leitura e compatibilidade com a biblioteca MicroPython oficial.
+Implementar a leitura do sensor AHT20 via interface I²C e exibir em tempo real a temperatura e a umidade relativa no display OLED da BitDogLab, garantindo estabilidade de leitura e compatibilidade com a biblioteca MicroPython oficial.
 
 ---
 
 ## 2. Metodologia e Implementação
-Apresente os procedimentos adotados, incluindo a arquitetura do sistema, estratégias de programação, bibliotecas utilizadas e justificativas de projeto.  
-Se aplicável, descreva o esquema de ligação elétrica, o protocolo de comunicação, as rotinas de aquisição e processamento de dados e o fluxo lógico do programa.  
 
-**Sugestão de tópicos a abordar:**
-- Diagrama de blocos e descrição funcional dos módulos;  
-- Linguagem e ambiente de desenvolvimento utilizados;  
-- Configurações específicas da BitDogLab e periféricos;  
-- Estratégias de depuração e calibração.
+O sistema foi desenvolvido em MicroPython, utilizando o ambiente VSCode, compatível com a placa BitDogLab, baseada no microcontrolador RP2040. O projeto tem como finalidade realizar a leitura de temperatura e umidade do sensor AHT20 via interface I²C e exibir os valores em tempo real no display OLED da placa.
+
+O esquemático segue:
+
+ ---------------------------
+|        BitDogLab          |
+|   (RP2040 + Periféricos)  |
+ ------------ --------------
+             |
+        Interface I²C
+             |
+      ------- ---------
+     |      AHT20      |
+     | Temp / Umidade  |
+      ------- --------
+             |
+        Dados Processados
+             |
+      ------- --------
+     |    OLED 0.96"  |
+      -----------------
+
 
 ---
 
 ## 3. Resultados e Análise
-Apresente os principais resultados obtidos, acompanhados de gráficos, tabelas ou imagens que sustentem a análise.  
-Discuta o comportamento observado, eventuais desvios em relação ao esperado e hipóteses para as causas identificadas.  
 
-**Inclua, sempre que possível:**
-- Valores medidos e respectivos limites de erro;  
-- Comparação entre medições experimentais e dados de referência do datasheet;  
-- Registros fotográficos do setup de teste;  
-- Logs ou capturas de tela relevantes.
+| Temperatura (°C) | Umidade Relativa (%) |
+|------------------|----------------------|
+| 23,45 | 57,07 |
+| 23,48 | 57,08 |
+| 23,50 | 57,05 |
+| 23,49 | 57,10 |
+| 23,51 | 57,08 |
+| 23,48 | 57,01 |
+| 23,48 | 57,03 |
+| 23,49 | 56,98 |
+| 23,50 | 56,99 |
+| 23,51 | 56,95 |
+| 23,50 | 56,96 |
+| 23,52 | 56,96 |
+| 23,49 | 56,95 |
+| 23,50 | 56,92 |
+| 23,51 | 56,93 |
+| 23,49 | 56,83 |
+| 23,51 | 56,80 |
+| 23,50 | 56,83 |
+| 23,51 | 56,90 |
 
 ---
 
@@ -45,17 +71,13 @@ Explique como eventuais limitações foram contornadas ou mitigadas, de modo a r
 ---
 
 ## 5. Conclusões e Trabalhos Futuros
-Resuma as conclusões técnicas alcançadas e a avaliação crítica dos resultados.  
-Indique aprimoramentos possíveis e oportunidades de extensão do trabalho, incluindo aplicações derivadas ou integração com outros módulos.
 
-**Exemplos:**
-- Otimizar a estabilidade do sinal por meio de filtragem digital;  
-- Adaptar o código para o ambiente C/C++ (Pico SDK);  
-- Integrar múltiplos sensores e consolidar dados via comunicação serial.
+O sistema desenvolvido mostrou-se funcional, estável e responsivo, sendo capaz de monitorar em tempo real a temperatura e a umidade relativa com precisão adequada ao sensor AHT20. A integração com o display OLED facilitou a visualização e validação dos resultados obtidos
+
+Para melhorar o desempenho do sistema como um todo, principalmente ao conectarmos vários sensores juntos na mesma bitboard, ou exigir uma carga de trabalho mais responsiva, a migração para a linguagem C seria altamente considerada, devido ao seu alto desempenho de processamento e memória.
 
 ---
 
 ## 6. Referências
-Liste as fontes técnicas e documentações consultadas, como datasheets, manuais de aplicação, artigos ou links de bibliotecas utilizadas.  
-O formato de citação é livre, desde que contenha autor, título e origem.
+https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
 
