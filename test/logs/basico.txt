@@ -1,0 +1,57 @@
+
+Temperatura: 23.45 C
+Humidade relativa: 57.07 %
+
+Temperatura: 23.48 C
+Humidade relativa: 57.08 %
+
+Temperatura: 23.50 C
+Humidade relativa: 57.05 %
+
+Temperatura: 23.49 C
+Humidade relativa: 57.10 %
+
+Temperatura: 23.51 C
+Humidade relativa: 57.08 %
+
+Temperatura: 23.48 C
+Humidade relativa: 57.01 %
+
+Temperatura: 23.48 C
+Humidade relativa: 57.03 %
+
+Temperatura: 23.49 C
+Humidade relativa: 56.98 %
+
+Temperatura: 23.50 C
+Humidade relativa: 56.99 %
+
+Temperatura: 23.51 C
+Humidade relativa: 56.95 %
+
+Temperatura: 23.50 C
+Humidade relativa: 56.96 %
+
+Temperatura: 23.52 C
+Humidade relativa: 56.96 %
+
+Temperatura: 23.49 C
+Humidade relativa: 56.95 %
+
+Temperatura: 23.50 C
+Humidade relativa: 56.92 %
+
+Temperatura: 23.51 C
+Humidade relativa: 56.93 %
+
+Temperatura: 23.49 C
+Humidade relativa: 56.83 %
+
+Temperatura: 23.51 C
+Humidade relativa: 56.80 %
+
+Temperatura: 23.50 C
+Humidade relativa: 56.83 %
+
+Temperatura: 23.51 C
+Humidade relativa: 56.90 %
