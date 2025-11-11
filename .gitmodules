@@ -1,3 +1,6 @@
 [submodule "src/lib/micropython_ahtx0"]
 	path = src/lib/micropython_ahtx0
 	url = git@github.com:targetblank/micropython_ahtx0.git
+[submodule "src/lib/micropython_ssd1306"]
+	path = src/lib/micropython_ssd1306
+	url = git@github.com:stlehmann/micropython-ssd1306.git
