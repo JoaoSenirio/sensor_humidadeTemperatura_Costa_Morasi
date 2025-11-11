@@ -12,9 +12,11 @@ O sistema foi desenvolvido em MicroPython, utilizando o ambiente VSCode, compat�
 
 O esquemático segue:
 
+```
+  ---------------------------
 |        BitDogLab          |
 |   (RP2040 + Periféricos)  |
-| ------------ -------------|
+ ------------ --------------
              |
         Interface I²C
              |
@@ -29,7 +31,7 @@ O esquemático segue:
      |    OLED 0.96"  |
       -----------------
 
-
+```
 ---
 
 ## 3. Resultados e Análise
