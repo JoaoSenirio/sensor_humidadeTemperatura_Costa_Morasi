@@ -1,23 +1,22 @@
-# <NOME DO SENSOR> — Sensores na BitDogLab
+# <AHT10> — Sensores na BitDogLab
 
 **Dupla:** João Senírio 245760/JoaoSenirio - Antônio Victor Morasi 167218/VictMorasi  
 **Turma:** EA801 — 2025S2  
 **Repositório:** https://github.com/JoaoSenirio/sensor_humidadeTemperatura_Costa_Morasi
 
 ## 1. Descrição do sensor
-- Fabricante / modelo: Asair / AHT10
+- Fabricante / modelo: Asair/AHT10
 - Princípio de funcionamento: O elemento de umidade é um sensor capacitivo fabricado por tecnologia MEMS. A variação da umidade altera a constante dielétrica do material, o que muda a capacitância, que posteriormente é transformada em sinal elétrico a ser lida pelo chip ASIC dedicado. Quanto ao funcionamento do elemento de temperatura, o datasheet indicada apenas que é um sensor padrão de temperatura on-chip. 
 - Tensão/consumo típicos: Tensão: 3.3V - Consumo típico em sleep 0.9 uW - Consumo típico em medição 0.07 mW.
-- Faixa de medição / resolução: Faixa de medição humidade: 0 - 100 %RH e Resolução humidade: 0.024 %RH.Faixa de medição temperatura: -40 - 85 °C e Resolução temperatura: 0.01 °C.
+- Faixa de medição / resolução: Faixa de medição humidade: 0 - 100 %RH e Resolução humidade: 0.024 %RH. Faixa de medição temperatura: -40 - 85 °C e Resolução temperatura: 0.01 °C.
 - Datasheet (URL): https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
-
 
 ## 2. Conexões de hardware
 - Tabela indicando as conexões entre BitDogLab e sensor:
 - Observações (resistores, alimentação externa, níveis lógicos):
 
 **Tabela de conexões (imagem em `docs/`):**  
-![conexoes](docs/conexoes.jpg)
+![conexoes](docs/montagem_hardware.jpg)
 
 ## 3. Dependências
 - MicroPython/C versão:
@@ -39,9 +38,13 @@ git submodule update --init --recursive
 - `src/exemplo_filtrado.py` — leitura com média móvel
 
 ## 6. Resultados e validação
-Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram salvos em test/logs. A seguir encontra-se as tabelas com os dados gerados, bem como gráficos de comparação entre os dois tipos de sinal. 
+Abaixo, encontra-se o resultado do código implementado para descobrir os endereços dos dispositivos conectados no barramento i2c. Vemos que tem um dispositivo no endereço 0x38, correspondendo exatamente ao sensor em uso AHT10.
 
-### Leituras de Temperatura e Umidade
+![endereços](docs/endereços_i2c.jpg)
+
+Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram salvos em test/logs. A seguir encontra-se as tabelas com os dados gerados, e fica nítido que as leituras de temperatura e umidade previamente tratadas com filtro de média móvel ficam bem mais estáveis.
+
+### Leituras simples de Temperatura e Umidade
 
 | Temperatura (°C) | Umidade Relativa (%) |
 |------------------|----------------------|
@@ -65,9 +68,9 @@ Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram sa
 | 23,50 | 56,83 |
 | 23,51 | 56,90 |
 
-### Leituras por Média Móvel
+### Leituras com médida móvel de Temperatura e Umidade
 
-| Temperatura Média Móvel (°C) | Umidade Relativa Média Móvel (%) |
+| Temperatura (°C) | Umidade Relativa (%) |
 |-------------------------------|----------------------------------|
 | 23,63 | 57,51 |
 | 23,64 | 57,53 |
@@ -88,8 +91,6 @@ Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram sa
 | 23,65 | 57,51 |
 | 23,65 | 57,50 |
 | 23,64 | 57,49 |
-
-- Prints/plots, fotos do setup, limitações, ruídos, dicas.
 
 ## 7. Licença
 - Ver arquivo `LICENSE`.
