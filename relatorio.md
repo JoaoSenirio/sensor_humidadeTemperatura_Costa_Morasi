@@ -74,7 +74,7 @@ Explique como eventuais limitações foram contornadas ou mitigadas, de modo a r
 
 O sistema desenvolvido mostrou-se funcional, estável e responsivo, sendo capaz de monitorar em tempo real a temperatura e a umidade relativa com precisão adequada ao sensor AHT20. A integração com o display OLED facilitou a visualização e validação dos resultados obtidos
 
-Para melhorar o desempenho do sistema como um todo, principalmente ao conectarmos vários sensores juntos na mesma bitboard, ou exigir uma carga de trabalho mais responsiva, a migração para a linguagem C seria altamente considerada, devido ao seu alto desempenho de processamento e memória.
+Para melhorar o desempenho do sistema como um todo, principalmente ao conectarmos vários sensores juntos na mesma bitboard, ou exigir uma carga de trabalho mais responsiva, a migração para a linguagem C seria altamente considerada, devido ao seu alto desempenho em processamento e memória.
 
 ---
 
