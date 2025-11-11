@@ -7,9 +7,8 @@
 ## 1. Descrição do sensor
 - Fabricante / modelo: Asair / AHT10
 - Princípio de funcionamento: O elemento de umidade é um sensor capacitivo fabricado por tecnologia MEMS. A variação da umidade altera a constante dielétrica do material, o que muda a capacitância, que posteriormente é transformada em sinal elétrico a ser lida pelo chip ASIC dedicado. Quanto ao funcionamento do elemento de temperatura, o datasheet indicada apenas que é um sensor padrão de temperatura on-chip. 
-- Tensão/consumo típicos: Tensão: 3.3V -  Consumo típico em sleep 0.9 uW - Consumo típico em medição 0.07 mW.
-- Faixa de medição / resolução: Faixa de medição humidade: 0 - 100 %RH. Resolução: 0.024 %RH
-Faixa de medição temperatura: -40 - 85 °C. Resolução: 0.01 °C.
+- Tensão/consumo típicos: Tensão: 3.3V - Consumo típico em sleep 0.9 uW - Consumo típico em medição 0.07 mW.
+- Faixa de medição / resolução: Faixa de medição humidade: 0 - 100 %RH e Resolução humidade: 0.024 %RH.Faixa de medição temperatura: -40 - 85 °C e Resolução temperatura: 0.01 °C.
 - Datasheet (URL): https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
 
 
@@ -40,6 +39,56 @@ git submodule update --init --recursive
 - `src/exemplo_filtrado.py` — leitura com média móvel
 
 ## 6. Resultados e validação
+Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram salvos em test/logs. A seguir encontra-se as tabelas com os dados gerados, bem como gráficos de comparação entre os dois tipos de sinal. 
+
+### Leituras de Temperatura e Umidade
+
+| Temperatura (°C) | Umidade Relativa (%) |
+|------------------|----------------------|
+| 23,45 | 57,07 |
+| 23,48 | 57,08 |
+| 23,50 | 57,05 |
+| 23,49 | 57,10 |
+| 23,51 | 57,08 |
+| 23,48 | 57,01 |
+| 23,48 | 57,03 |
+| 23,49 | 56,98 |
+| 23,50 | 56,99 |
+| 23,51 | 56,95 |
+| 23,50 | 56,96 |
+| 23,52 | 56,96 |
+| 23,49 | 56,95 |
+| 23,50 | 56,92 |
+| 23,51 | 56,93 |
+| 23,49 | 56,83 |
+| 23,51 | 56,80 |
+| 23,50 | 56,83 |
+| 23,51 | 56,90 |
+
+### Leituras por Média Móvel
+
+| Temperatura Média Móvel (°C) | Umidade Relativa Média Móvel (%) |
+|-------------------------------|----------------------------------|
+| 23,63 | 57,51 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,52 |
+| 23,64 | 57,52 |
+| 23,64 | 57,51 |
+| 23,64 | 57,50 |
+| 23,65 | 57,50 |
+| 23,64 | 57,50 |
+| 23,63 | 57,49 |
+| 23,64 | 57,49 |
+| 23,64 | 57,50 |
+| 23,64 | 57,50 |
+| 23,65 | 57,51 |
+| 23,65 | 57,50 |
+| 23,64 | 57,49 |
+
 - Prints/plots, fotos do setup, limitações, ruídos, dicas.
 
 ## 7. Licença
