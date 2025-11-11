@@ -1,4 +1,4 @@
-# <AHT10> — Sensores na BitDogLab
+# AHT10 — Sensores na BitDogLab
 
 **Dupla:** João Senírio 245760/JoaoSenirio - Antônio Victor Morasi 167218/VictMorasi  
 **Turma:** EA801 — 2025S2  
@@ -40,7 +40,7 @@ git submodule update --init --recursive
 ## 6. Resultados e validação
 Abaixo, encontra-se o resultado do código implementado para descobrir os endereços dos dispositivos conectados no barramento i2c. Vemos que tem um dispositivo no endereço 0x38, correspondendo exatamente ao sensor em uso AHT10.
 
-![endereços](docs/endereços_i2c.jpg)
+![endereços I²C](docs/enderecos_i2c.jpg)
 
 Dados preliminares dos códigos exemplo_basico.py e exemplo_filtrado.py foram salvos em test/logs. A seguir encontra-se as tabelas com os dados gerados, e fica nítido que as leituras de temperatura e umidade previamente tratadas com filtro de média móvel ficam bem mais estáveis.
 
