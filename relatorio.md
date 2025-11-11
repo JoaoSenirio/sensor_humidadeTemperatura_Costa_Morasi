@@ -12,6 +12,7 @@ O sistema foi desenvolvido em MicroPython, utilizando o ambiente VSCode, compat�
 
 O esquemático segue:
 
+> ---------------------------
 |        BitDogLab          |
 |   (RP2040 + Periféricos)  |
  ------------ --------------
