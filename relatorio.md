@@ -12,10 +12,9 @@ O sistema foi desenvolvido em MicroPython, utilizando o ambiente VSCode, compat�
 
 O esquemático segue:
 
-> ---------------------------
 |        BitDogLab          |
 |   (RP2040 + Periféricos)  |
- ------------ --------------
+| ------------ -------------|
              |
         Interface I²C
              |
@@ -56,6 +55,8 @@ O esquemático segue:
 | 23,51 | 56,80 |
 | 23,50 | 56,83 |
 | 23,51 | 56,90 |
+
+O comportamento observado demonstra que o sistema de aquisição e exibição está operando de forma confiável. As pequenas oscilações registradas podem ser atribuídas a variações ambientais e atualizações periódicas da medição, sem isso, necessariamente, indicar instabilidade eletrônica ou de software.
 
 ---
 
