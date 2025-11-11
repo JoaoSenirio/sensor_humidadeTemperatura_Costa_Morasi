@@ -1,15 +1,17 @@
 # <NOME DO SENSOR> — Sensores na BitDogLab
 
-**Dupla:** João Senírio 245760/JoaoSenirio Antônio Victor Morasi 167218/VictMorasi  
+**Dupla:** João Senírio 245760/JoaoSenirio - Antônio Victor Morasi 167218/VictMorasi  
 **Turma:** EA801 — 2025S2  
 **Repositório:** https://github.com/JoaoSenirio/sensor_humidadeTemperatura_Costa_Morasi
 
 ## 1. Descrição do sensor
-- Fabricante / modelo:
-- Princípio de funcionamento:
-- Tensão/consumo típicos:
-- Faixa de medição / resolução:
-- Datasheet (URL):
+- Fabricante / modelo: Asair / AHT10
+- Princípio de funcionamento: O elemento de umidade é um sensor capacitivo fabricado por tecnologia MEMS. A variação da umidade altera a constante dielétrica do material, o que muda a capacitância, que posteriormente é transformada em sinal elétrico a ser lida pelo chip ASIC dedicado. Quanto ao funcionamento do elemento de temperatura, o datasheet indicada apenas que é um sensor padrão de temperatura on-chip. 
+- Tensão/consumo típicos: Tensão: 3.3V -  Consumo típico em sleep 0.9 uW - Consumo típico em medição 0.07 mW.
+- Faixa de medição / resolução: Faixa de medição humidade: 0 - 100 %RH. Resolução: 0.024 %RH
+Faixa de medição temperatura: -40 - 85 °C. Resolução: 0.01 °C.
+- Datasheet (URL): https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
+
 
 ## 2. Conexões de hardware
 - Tabela indicando as conexões entre BitDogLab e sensor:
@@ -20,19 +22,22 @@
 
 ## 3. Dependências
 - MicroPython/C versão:
-- Bibliotecas utilizadas:
+- Bibliotecas utilizadas: SSD1306 e ahtx0
 - Como instalar (passo a passo):
+Para instalar as bibliotecas indicadas, basta executar o comando abaixo na raiz do repositório git local. Isso deve gerar as bibliotecas no caminho src/lib. Uma vez feito isso, é preciso realizar o upload dos arquivos ssd1306.py e ahtx0.py no RP2040.
+
+```bash
+git submodule update --init --recursive
+```
 
 ## 4. Como executar
 ```bash
-# MicroPython (Thonny): copiar src/main.py para a placa e rodar
-# C (Pico SDK): ver docs/compilacao.md
+# MicroPython: Inicializar os códigos em src no vscode ou no thonny por meio dos botões RUN. Também pode-se renomear os arquivos para main.py e realizar o upload no RP2040.
 ```
 
 ## 5. Exemplos de uso
 - `src/exemplo_basico.py` — leitura bruta  
-- `src/exemplo_filtrado.py` — leitura com média móvel  
-- `test/` — códigos de teste com instruções  
+- `src/exemplo_filtrado.py` — leitura com média móvel
 
 ## 6. Resultados e validação
 - Prints/plots, fotos do setup, limitações, ruídos, dicas.
