@@ -12,24 +12,24 @@ O sistema foi desenvolvido em MicroPython, utilizando o ambiente VSCode, compat�
 O esquemático segue:
 
 ```
-        ---------------------------
-        |        BitDogLab          |
-        |   (RP2040 + Periféricos)  |
-        ------------ --------------
+         --------------------------
+        |        BitDogLab         |
+        |   (RP2040 + Periféricos) |
+         ----------- --------------
                     |
                 Interface I²C
                     |
-            ------- ---------
+             ------- ---------
             |      AHT20      |
             | Temp / Umidade  |
-            ------- --------
-                    |
-                Dados Processados
-                    |
+              ------- --------
+                     |
+               Dados Processados
+                     |
                     / \
-        ---------- v   v ----------------
+         --------- v   v ---------------
         |OLED 0.96"|   | Monitor serial |
-        -----------     ----------------
+         ----------     ----------------
 
 ```
 ---
