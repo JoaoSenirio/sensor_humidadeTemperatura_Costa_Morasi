@@ -6,15 +6,31 @@ O objetivo do experimento era familiarizar-se com sensores digitais, buscando re
 ---
 
 ## 2. Metodologia e Implementação
-Apresente os procedimentos adotados, incluindo a arquitetura do sistema, estratégias de programação, bibliotecas utilizadas e justificativas de projeto.  
-Se aplicável, descreva o esquema de ligação elétrica, o protocolo de comunicação, as rotinas de aquisição e processamento de dados e o fluxo lógico do programa.  
 
-**Sugestão de tópicos a abordar:**
-- Diagrama de blocos e descrição funcional dos módulos;  
-- Linguagem e ambiente de desenvolvimento utilizados;  
-- Configurações específicas da BitDogLab e periféricos;  
-- Estratégias de depuração e calibração.
+O sistema foi desenvolvido em MicroPython, utilizando o ambiente VSCode, compatível com a placa BitDogLab, baseada no microcontrolador RP2040. O projeto tem como finalidade realizar a leitura de temperatura e umidade do sensor AHT20 via interface I²C e exibir os valores em tempo real no display OLED da placa.
 
+O esquemático segue:
+
+```
+  ---------------------------
+|        BitDogLab          |
+|   (RP2040 + Periféricos)  |
+ ------------ --------------
+             |
+        Interface I²C
+             |
+      ------- ---------
+     |      AHT20      |
+     | Temp / Umidade  |
+      ------- --------
+             |
+        Dados Processados
+             |
+      ------- --------
+     |    OLED 0.96"  |
+      -----------------
+
+```
 ---
 
 ## 3. Resultados e Análise
@@ -87,17 +103,13 @@ Para o código que implementa o filtro de média móvel, assumiu-se que, enquant
 ---
 
 ## 5. Conclusões e Trabalhos Futuros
-Resuma as conclusões técnicas alcançadas e a avaliação crítica dos resultados.  
-Indique aprimoramentos possíveis e oportunidades de extensão do trabalho, incluindo aplicações derivadas ou integração com outros módulos.
 
-**Exemplos:**
-- Otimizar a estabilidade do sinal por meio de filtragem digital;  
-- Adaptar o código para o ambiente C/C++ (Pico SDK);  
-- Integrar múltiplos sensores e consolidar dados via comunicação serial.
+O sistema desenvolvido mostrou-se funcional, estável e responsivo, sendo capaz de monitorar em tempo real a temperatura e a umidade relativa com precisão adequada ao sensor AHT20. A integração com o display OLED facilitou a visualização e validação dos resultados obtidos
+
+Para melhorar o desempenho do sistema como um todo, principalmente ao conectarmos vários sensores juntos na mesma bitboard, ou exigir uma carga de trabalho mais responsiva, a migração para a linguagem C seria altamente considerada, devido ao seu alto desempenho em processamento e memória.
 
 ---
 
 ## 6. Referências
-Liste as fontes técnicas e documentações consultadas, como datasheets, manuais de aplicação, artigos ou links de bibliotecas utilizadas.  
-O formato de citação é livre, desde que contenha autor, título e origem.
+https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
 
