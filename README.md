@@ -8,7 +8,7 @@
 - Fabricante / modelo: Asair/AHT10
 - Princípio de funcionamento: O elemento de umidade é um sensor capacitivo fabricado por tecnologia MEMS. A variação da umidade altera a constante dielétrica do material, o que muda a capacitância, que posteriormente é transformada em sinal elétrico a ser lida pelo chip ASIC dedicado. Quanto ao funcionamento do elemento de temperatura, o datasheet indicada apenas que é um sensor padrão de temperatura on-chip. 
 - Tensão/consumo típicos: Tensão: 3.3V - Consumo típico em sleep 0.9 uW - Consumo típico em medição 0.07 mW.
-- Faixa de medição / resolução: Faixa de medição humidade: 0 - 100 %RH e Resolução humidade: 0.024 %RH. Faixa de medição temperatura: -40 - 85 °C e Resolução temperatura: 0.01 °C.
+- Faixa de medição / resolução: Faixa de medição umidade: 0 - 100 %RH e Resolução umidade: 0.024 %RH. Faixa de medição temperatura: -40 - 85 °C e Resolução temperatura: 0.01 °C.
 - Datasheet (URL): https://server4.eca.ir/eshop/AHT10/Aosong_AHT10_en_draft_0c.pdf
 
 ## 2. Conexões de hardware
