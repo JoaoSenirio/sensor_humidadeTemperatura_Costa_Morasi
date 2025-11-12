@@ -26,6 +26,7 @@ O esquemático segue:
              |
         Dados Processados
              |
+            / \
 ---------- v   v ----------------
 |OLED 0.96"|   | Monitor serial |
 -----------     ----------------
