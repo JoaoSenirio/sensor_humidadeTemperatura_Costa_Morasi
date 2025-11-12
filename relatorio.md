@@ -1,8 +1,7 @@
 # Relatório Técnico da Dupla
 
 ## 1. Escopo e Objetivos
-
-Implementar a leitura do sensor AHT20 via interface I²C e exibir em tempo real a temperatura e a umidade relativa no display OLED da BitDogLab, garantindo estabilidade de leitura e compatibilidade com a biblioteca MicroPython oficial.
+O objetivo do experimento era familiarizar-se com sensores digitais, buscando realizar a comunicação/leitura do sensor AHT10 via interface I2C, imprimindo, em tempo real, a temperatura e umidade. Ademais, também tinha-se a intenção de gerar a documentação no repositório de código (github) segundo o template fornecido, habituando-se aos modelos da disciplina EA801.
 
 ---
 
@@ -35,6 +34,13 @@ O esquemático segue:
 ---
 
 ## 3. Resultados e Análise
+A varredura dos endereços I2C, por meio do código src/endereco_sensor.py, gerou dois endereços, sendo 0x38 o endereço do sensor AHT10, como ilustrado na figura abaixo.
+
+![endereços I²C](docs/enderecos_i2c.jpg)
+
+Ademais, os dados de temperatura e umidade foram obtidos por meio dos códigos em src/exemplo_basico.py e src/exemplo_filtrado.py, estando expressos nas tabelas abaixo. Percebe-se nitidamente que os dados oriundos do filtro de média móvel são um tanto mais estáveis que aqueles que não sofreram nenhum tipo de tratamento. Contudo, o ônus de se ter uma leitura mais estável é o tempo que demora até esse nível de estabilidade ser alcançado, uma vez que é necessário preencher o vetor/lista, o qual é atualizado a cada nova medida, sendo computada a média dos valores das ultimas 5 leituras armazenadas.
+
+### Leituras simples de Temperatura e Umidade
 
 | Temperatura (°C) | Umidade Relativa (%) |
 |------------------|----------------------|
@@ -58,16 +64,41 @@ O esquemático segue:
 | 23,50 | 56,83 |
 | 23,51 | 56,90 |
 
-O comportamento observado demonstra que o sistema de aquisição e exibição está operando de forma confiável. As pequenas oscilações registradas podem ser atribuídas a variações ambientais e atualizações periódicas da medição, sem isso, necessariamente, indicar instabilidade eletrônica ou de software.
+### Leituras com médida móvel de Temperatura e Umidade
+
+| Temperatura (°C) | Umidade Relativa (%) |
+|-------------------------------|----------------------------------|
+| 23,63 | 57,51 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,53 |
+| 23,64 | 57,52 |
+| 23,64 | 57,52 |
+| 23,64 | 57,51 |
+| 23,64 | 57,50 |
+| 23,65 | 57,50 |
+| 23,64 | 57,50 |
+| 23,63 | 57,49 |
+| 23,64 | 57,49 |
+| 23,64 | 57,50 |
+| 23,64 | 57,50 |
+| 23,65 | 57,51 |
+| 23,65 | 57,50 |
+| 23,64 | 57,49 |
 
 ---
 
 ## 4. Dificuldades e Soluções
+Não foram encontradas dificuldades associadas à montagem do hardware. As maiores dificuldades concentraram-se em encontrar uma biblioteca para o sensor AHT10 que fosse compatível com RP2040 (a qual já encontra-se relacionada nesse repositório), fazer o upload dela para o RP2040 para que os códigos seguintes pudessem fazer o import dela, bem como o desenvolvimento do código que implementa o filtro de média móvel.
 
-Dificuldade: As bibliotecas necessárias para operar o sensor e o display (ahtx0.py e ssd1306.py) não estavam presentes no firmware padrão do MicroPython, resultando em erro de importação.
+```bash
+# No VSCode teclar F1 para abrir a janela de comandos e digitar o comando abaixo
+Micropico: Upload project to Pico
+```
 
-Solução: Ambas as bibliotecas foram adicionadas manualmente ao diretório do projeto. Essa abordagem garantiu compatibilidade total com o ambiente MicroPython da BitDogLab, permitindo o correto funcionamento tanto do sensor AHT20 quanto do display OLED.
-
+Para o código que implementa o filtro de média móvel, assumiu-se que, enquanto estiver preenchendo o vetor/lista, nenhuma informação referente à temperatura e umidade são impressas. Quando o vetor/lista estiver totalmente preenchida, é realizado o shift para a esquerda - descartando a leitura mais antiga -, insere-se a nova medida no final do vetor e computa-se a média.
 
 ---
 
